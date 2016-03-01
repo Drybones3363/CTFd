@@ -12,4 +12,4 @@ while ! nc db 3306 >/dev/null 2>&1 < /dev/null; do
     sleep 1
 done
 
-gunicorn --bind bibb.dreamhost.com:21 -w 4 "CTFd:create_app()"
+gunicorn --bind 0.0.0.0:8000 -w 4 "CTFd:create_app()"

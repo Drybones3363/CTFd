@@ -9,5 +9,5 @@ WORKDIR /opt/CTFd
 RUN pip install -r requirements.txt
 RUN pip install pymysql
 
-CMD ["gunicorn", "--bind", "bibb.dreamhost.com:21", "-w", "4", "CTFd:create_app()"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "-w", "4", "CTFd:create_app()"]
 EXPOSE 8000
